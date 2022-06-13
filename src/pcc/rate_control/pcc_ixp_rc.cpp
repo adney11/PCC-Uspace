@@ -87,7 +87,7 @@ QuicBandwidth PccIxpRateController::GetNextSendingRate(
 void PccIxpRateController::MonitorIntervalFinished(const MonitorInterval& mi) {
     
     double rate = mi.GetTargetSendingRate();
-    std::cout << "Rate = " << rate << std::endl;
+    //std::cout << "Rate = " << rate << std::endl;
     if (cur_rs_ == NULL) {
         std::cout << "RS NULL" << std::endl;
         cur_rs_ = new RateSample(rate);
@@ -95,7 +95,7 @@ void PccIxpRateController::MonitorIntervalFinished(const MonitorInterval& mi) {
         return;
     }
 
-    std::cout << "RS rate = " << cur_rs_->rate << std::endl;
+    //std::cout << "RS rate = " << cur_rs_->rate << std::endl;
     if (rate != cur_rs_->rate) {
         if (cur_rs_->n_samples == 0) {
             delete cur_rs_;

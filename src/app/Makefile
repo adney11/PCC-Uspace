@@ -2,7 +2,7 @@
 SOURCES = $(wildcard ./*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
-CCFLAGS += -fPIC
+CCFLAGS += -fPIC 
 
 %.o: %.cpp
 	$(CC) $(CCFLAGS) $< -c
